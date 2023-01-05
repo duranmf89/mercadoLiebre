@@ -1,0 +1,319 @@
+/* HTML ----------------------------------*/
+
+/* PROPIEDADES PARA TODO EL ARCHIVO HTML -------------------------- */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*------------------------------------------------------------------*/
+
+body{
+    font-family: 'Roboto', sans-serif;  /* Letra para todo el cuerpo del archivo*/
+    background-color: #ebebeb;        /* Fondo de todo el cuerpo del archivo*/
+}
+h4{
+    font-size: 16px;
+}
+p{
+    font-size: 12px;                    /* Tamanio de letra para todos los parrafos */
+}
+
+div.top-header{
+    padding: 5%;
+    display: flex;
+    align-items: center;
+}
+
+header{
+    background-color: #EAC926;        /* Fondo del cabezal del archivo */
+    
+}
+
+/* PROPIEDADES DEL LOGO DEL ARCHIVO -------------------------------*/
+
+header div.logo{
+    width: 50%;
+    padding: 10px;
+}
+
+/*------------------------------------------------------------------*/
+
+header nav{
+    font-size: 12px;
+    display: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #000;
+}
+/* Entradas de busqueda (input) Boton de buscar, la lupa (sumbit)--*/
+
+.form{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header .form .input{
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+header .form .submit{
+    background-color: #FFF;
+    border: 1px solid #000;
+    color: #666;
+    width: 10%;
+}
+/*------------------------------------------------------------------*/
+
+header div.top-header p{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+div.burger-menu{
+    text-align: center;
+}
+
+/* MENU HAMBURGUESA -------------------------------------------------*/
+div.burger-menu i{
+    /* FONDO = */ background-color: #0044AA;
+    /* COLOR DE LAS BARRAS = */ color: #FFF;
+    /* TAMANIO DE LAS BARRAS = */font-size: 20px;
+    /* ALTO = */height: 40px;
+    /* ANCHO = */width: 40px;
+    /* BORDE CIRCULAR = */ border-radius: 5px;
+    /* RELLENO DE SUS LADOS = */ padding: 10px;
+    /* MARGEN = */ margin: 10px 0px 10px 0px;  
+}
+/* ------------------------------------------------------------------*/
+
+/* LETRAS DE CADA ARTICULO Y TITULOS DE SECCIONES--------------------*/
+
+h3{
+    font-size: 24px;
+}
+
+.price{
+    font-size: 18px;
+    width: 30%;
+}
+
+.discount{
+    width: 70%;
+}
+
+.discount,
+.description{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3,
+.description{
+    color: #666;
+}
+
+main section article:hover .description{
+    display: block;
+    margin-top: 20px;
+    transition: all 1s;
+}
+/* -------------------------------------------------------------------*/
+section.banner img{
+    width: 100%;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;      /* Centra todo lo que esta dentro del main*/
+}
+main section article{
+    background-color: #fff;    /* Le da el fondo a cada articulo*/
+    margin: 10px 0px;            /* Separa cada articulo con sus respectivas descripciones*/
+}
+
+
+main section article img{
+    width: 100%;                /* Le da el ancho a la imagen en porcentaje para q se adecue a la pantalla*/
+}
+
+main section article i,
+.discount{
+    color: #39b54a;           /* Le da el color al icono del camioncito */
+}
+
+main section article:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    transition: all 500ms;
+}
+
+main section article i{
+    /* FONDO = */background-color: #FFF;
+    /* TAMANIO DEL CAMIONCITO = */ font-size: 16px;
+
+    /* PROPIEDADES DEL BORDE Y EL FONDO DEL ICONO*/
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    padding: 5px;
+    border-radius: 50%;
+
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    
+
+}
+article:hover .fas{
+    rotate: -100grad;
+    transition: all 500ms;
+
+}
+/* ---------------------------------------------------------------------*/
+
+main section h3{
+    margin: 20px 0px;           /* Margen de los subtitulos (Ultimas visitas y Ofertas) */
+}
+
+/* CAJA CON DESCRIPCION DE LOS ARTICULOS (ENGLOBA CAMIONCITO, PRECIO, DESCUENTO, NOMBRE ARTICULO----------------*/
+
+article div.main-article{
+    position: relative;
+    width: 100%;
+    border-top: 1px solid #ebebeb;
+    padding: 15px;                      /* Relleno entre los bordes de la caja.*/
+    display: flex;
+    flex-wrap: wrap;
+}
+/* ---------------------------------------------------------------------*/
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/*.products article{
+    margin-top: 10px;
+    background-color: white;
+}*/
+
+/* MEDIA QUERIES PARA DIFERENCIAR TAMANIOS DE PANTALLA------------------*/
+
+@media (min-width: 367px){
+    .description{
+        display: none;
+    }
+    .products article{
+        width: 45%;
+    }
+    .price, .discount{
+        width:50%;
+    }
+    header nav{
+       display: flex;
+       justify-content: space-around;
+    }
+    header nav ul{
+        display: flex;
+     }
+
+     header nav ul li{
+        margin: 8px;
+     }
+    div.burger-menu{
+        text-align: center;
+        display: none;
+    } 
+    
+}
+
+@media (min-width: 769px){
+    .products article{
+        width: 20%;
+    }
+    .footer-style{
+        display: flex;
+    }
+    
+}
+
+/* ---------------------------------------------------------------------*/
+.footer-icon{
+    color: #1259c3;
+    font-size: 28px;
+}
+
+form{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #ebebeb;
+    padding: 15px; 
+    margin: 10px 0px;  
+    font-size: 15px;
+    border-top: 1px solid #adabad;
+    border-bottom: 1px solid #adabad;
+ 
+}
+
+.pag-registro{
+    background-color: rgb(248, 242, 242);
+    display: flex;
+    flex-direction: column;   
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    border-top: 2px solid #ebebeb;
+    margin: 10px 0px;  
+
+}
+.botones{
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+.buttonRes{ 
+    justify-content: center;
+    width: 45%;
+}
+.buttonSub{ 
+    width: 45%;
+    justify-content: center;
+    
+}
+
+.buttonSub:hover{ 
+    background-color: #0022aa;  
+}
+.footers{
+    padding:20px;
+}
+
+.footer-icon i:hover{
+    color:#EAC926;
+}
+footer div .fas{
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #1259c3 
+    /* color que pide el enunciado:
+    color: #03264C;*/
+}
